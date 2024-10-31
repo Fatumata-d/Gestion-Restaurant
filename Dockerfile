@@ -27,8 +27,8 @@ WORKDIR /var/www
 RUN composer install --no-dev --optimize-autoloader
 
 # Donnez les bonnes permissions
-RUN chown -R www-data:www-data /var/www \
-    && chmod -R 755 /var/www/storage
+RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache \
+    && chmod -R 775 /var/www/storage /var/www/bootstrap/cache
 
 # Expose le port 80
 EXPOSE 80
