@@ -4,7 +4,7 @@ env: php
 plan: free
 services:
   - type: web
-    name: gestion-restaurant
+    name: gestion_restaurant
     env: php
     version: 8.0.2  
     buildCommand: "composer install"  
